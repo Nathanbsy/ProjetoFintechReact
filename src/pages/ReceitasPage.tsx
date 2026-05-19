@@ -1,6 +1,5 @@
 import type { FormEvent } from 'react'
 import { PageHeader } from '../components/PageHeader'
-import { StatusMessages } from '../components/StatusMessages'
 import { useCrud } from '../hooks/useCrud'
 import type { Receita } from '../types'
 import { receitaApi } from '../utils/api'
@@ -25,7 +24,7 @@ export function ReceitasPage() {
   return (
     <section className="page-stack">
       <PageHeader
-        eyebrow="CRUD"
+        eyebrow=""
         title="Receitas"
         description="Registre entradas, origem dos valores e historico mensal."
       />
@@ -115,8 +114,6 @@ export function ReceitasPage() {
               Atualizar
             </button>
           </div>
-
-          <StatusMessages loading={crud.loading} message={crud.message} />
 
           <div className="table-scroll">
             <table>

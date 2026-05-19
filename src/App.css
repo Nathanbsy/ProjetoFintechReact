@@ -69,17 +69,21 @@ nav {
   gap: 8px;
 }
 
-nav button {
+nav a {
+  padding: 6px;
   background: transparent;
   color: #d7dee6;
   justify-content: flex-start;
   width: 100%;
+  border-radius: 8px;
+  transition: all 0.2s ease;
 }
 
-nav button.active,
-nav button:hover {
+nav a.active,
+nav a:hover {
   background: #334250;
   color: #ffffff;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .content {
@@ -88,49 +92,29 @@ nav button:hover {
 }
 
 .page-stack {
-  display: grid;
-  gap: 24px;
-  margin: 0 auto;
-  max-width: 1180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 12px;
+  width: 100%;
+  height: 100%;
 }
 
 .page-header {
   max-width: 760px;
+  text-align: center;
 }
 
 .eyebrow {
   color: #0f766e;
-  font-size: 13px;
+  font-size: 18px;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
-.metric-grid {
-  display: grid;
-  gap: 16px;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
 
-.metric,
-.entity-form,
-.table-panel {
-  background: #ffffff;
-  border: 1px solid #dde7e4;
-  border-radius: 8px;
-  box-shadow: 0 12px 30px rgba(26, 47, 52, 0.06);
-}
-
-.metric {
-  display: grid;
-  gap: 4px;
-  padding: 22px;
-}
-
-.metric strong {
-  color: #0f766e;
-  font-size: 34px;
-}
 
 .quick-actions,
 .form-actions,

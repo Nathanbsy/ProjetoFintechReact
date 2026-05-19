@@ -1,6 +1,5 @@
 import type { FormEvent } from 'react'
 import { PageHeader } from '../components/PageHeader'
-import { StatusMessages } from '../components/StatusMessages'
 import { useCrud } from '../hooks/useCrud'
 import type { Gasto } from '../types'
 import { gastoApi } from '../utils/api'
@@ -25,7 +24,7 @@ export function GastosPage() {
   return (
     <section className="page-stack">
       <PageHeader
-        eyebrow="CRUD"
+        eyebrow=""
         title="Gastos"
         description="Cadastre despesas por categoria e acompanhe saidas."
       />
@@ -115,8 +114,6 @@ export function GastosPage() {
               Atualizar
             </button>
           </div>
-
-          <StatusMessages loading={crud.loading} message={crud.message} />
 
           <div className="table-scroll">
             <table>

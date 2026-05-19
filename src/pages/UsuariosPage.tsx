@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import type { FormEvent } from 'react'
 import { PageHeader } from '../components/PageHeader'
-import { StatusMessages } from '../components/StatusMessages'
 import { useCrud } from '../hooks/useCrud'
 import type { Usuario } from '../types'
 import { usuarioApi } from '../utils/api'
@@ -120,8 +119,6 @@ export function UsuariosPage() {
               Limpar
             </button>
           </form>
-
-          <StatusMessages loading={crud.loading} message={crud.message} />
 
           <div className="table-scroll">
             <table>
