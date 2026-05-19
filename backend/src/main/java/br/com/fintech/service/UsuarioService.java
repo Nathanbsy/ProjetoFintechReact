@@ -26,6 +26,11 @@ public class UsuarioService {
                 .orElseThrow(() -> new RecursoNaoEncontradoException("Usuario nao encontrado."));
     }
 
+    public Usuario buscarPorEmail(String email) {
+        return repository.findByEmailIgnoreCase(email)
+                .orElseThrow(() -> new RecursoNaoEncontradoException("Usuario nao encontrado."));
+    }
+
     public Usuario criar(Usuario usuario) {
         usuario.setId(null);
         return repository.save(usuario);

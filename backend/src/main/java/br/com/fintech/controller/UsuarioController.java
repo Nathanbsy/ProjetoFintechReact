@@ -38,6 +38,11 @@ public class UsuarioController {
         return ResponseEntity.ok(service.buscarPorId(id));
     }
 
+    @GetMapping("/email/{email}")
+    public ResponseEntity<Usuario> buscarPorEmail(@PathVariable String email) {
+        return ResponseEntity.ok(service.buscarPorEmail(email));
+    }
+
     @PostMapping
     public ResponseEntity<Usuario> criar(@Valid @RequestBody Usuario usuario) {
         Usuario criado = service.criar(usuario);

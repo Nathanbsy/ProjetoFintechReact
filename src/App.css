@@ -135,7 +135,8 @@ nav button:hover {
 .quick-actions,
 .form-actions,
 .row-actions,
-.table-header {
+.table-header,
+.search-form {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
@@ -162,6 +163,16 @@ nav button:hover {
 .table-header {
   justify-content: space-between;
   margin-bottom: 12px;
+}
+
+.search-form {
+  border-bottom: 1px solid #e2ebe8;
+  margin-bottom: 12px;
+  padding-bottom: 14px;
+}
+
+.search-form label {
+  flex: 1 1 260px;
 }
 
 .table-scroll {
